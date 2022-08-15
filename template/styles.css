@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --title: #fffcf9;
+    --subtitle: #b3b3b3;
+    --bg-button: #e9e6e3;
+    --background: linear-gradient(43deg, #102d71 0%, #000000 52%, #c12a23 100%);
+  }
+
+body {
+    background: linear-gradient(to top right, rgba(11, 11, 124, 0.726),black,rgba(133, 2, 2, 0.548));
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.top {
+    align-items: center;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+
+.top img {
+    width: 5em;
+}
+
+.top h1 {
+    font-size: 3em;
+}
+
+.filme {
+    display: flex;
+}
+
+.filme .capa {
+    padding-left: 15%;
+} 
+
+.filme .descricao {
+    padding-top: 2%;
+    
+    padding-left: 5%;
+}
+.filme .descricao h2 {
+    padding-bottom: 5%;
+}
+
+.pesquisa {
+    padding-top: 5%;
+    text-align: center;
+}
+
+.pesquisa button{
+    margin: auto;
+    width: 15em;
+    height: 3em;
+    font-size: 1em;
+    margin-bottom: 2%;
+    padding: 0 2%;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+}
+
+.pesquisa button img {
+   margin: 3%;
+}
