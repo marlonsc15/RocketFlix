@@ -14,7 +14,7 @@
   }
 
 body {
-    background: linear-gradient(to top right, rgba(11, 11, 124, 0.726),black,rgba(133, 2, 2, 0.548));
+    background: var(--background);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: contain;
@@ -34,6 +34,7 @@ body {
 }
 
 .top h1 {
+    color: var(--title);
     font-size: 3em;
 }
 
@@ -60,6 +61,7 @@ body {
 }
 
 .pesquisa button{
+    background: var(--bg-button);
     margin: auto;
     width: 15em;
     height: 3em;
@@ -73,4 +75,9 @@ body {
 
 .pesquisa button img {
    margin: 3%;
+}
+
+button:hover{
+    background: #000000;
+    cursor: pointer;
 }

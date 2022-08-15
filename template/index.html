@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <link rel="shortcut icon" href="assets/favico/favicon.ico" type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <title>Rocketflix</title>
 </head>
 
@@ -17,15 +18,15 @@
   </div>
   <div class="filme">
     <div class="capa">
-      
+      <img id="img" src="">
     </div>
     <div class="descricao">
-      <h2>nome</h2>
-      <p>O filme fala sobre capivaras espacias que defendem a terra no ano de 2108...</p>
+      <h2 id="nome">nome</h2>
+      <p id="overview">O filme fala sobre capivaras espacias que defendem a terra no ano de 2108...</p>
     </div>
   </div>
   <div class="pesquisa">
-    <button onclick="filme()"><img src="assets/favico/favicon-32x32.png" alt=""> Encontrar filme</button>
+    <button class="btn" onclick="getfilm()"><img src="assets/favico/favicon-32x32.png" alt=""> Encontrar filme</button>
     <p>Clique em "Encontrar filme" que traremos informações de algum filme para você assistir hoje.</p>
   </div>
 
