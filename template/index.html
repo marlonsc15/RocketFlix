@@ -14,23 +14,63 @@
 <body>
   <div class="top">
     <img class="logo" src="assets/shuffle.svg" alt="shuffle">
-    <h1>Não sabe oque assistir?</h1>
+    <h1 >Não sabe oque assistir?</h1>
   </div>
   <div class="filme">
     <div class="capa">
       <img id="img" src="">
     </div>
     <div class="descricao">
-      <h2 id="nome">nome</h2>
-      <p id="overview">O filme fala sobre capivaras espacias que defendem a terra no ano de 2108...</p>
+      <h2 id="nome"></h2>
+      <p id="overview"></p>
     </div>
   </div>
   <div class="pesquisa">
-    <button class="btn" onclick="getfilm()"><img src="assets/favico/favicon-32x32.png" alt=""> Encontrar filme</button>
+    <button id="btn" onclick="loading(), closeL()"><img src="assets/favico/favicon-32x32.png" alt=""> Encontrar filme</button>
     <p>Clique em "Encontrar filme" que traremos informações de algum filme para você assistir hoje.</p>
   </div>
 
-  <script type="module" src="main.js"></script>
+  <div id="load" onclick="Cloading()" class="carregando">
+    <svg viewBox="-25 -25 100 100" preserveAspectRatio>
+      <defs>
+        <linearGradient id="gr-simple" x1="0" y1="0" x2="100%" y2="100%">
+          <stop stop-color="rgba(255,0,0,.2)" offset="10%"/>
+          <stop stop-color="rgba(255,0,0,.7)" offset="90%"/>
+        </linearGradient>
+      </defs>	
+      <circle class="cls-1" cx="26" cy="27" r="26" stroke="url(#gr-simple)"/>
+      <path class="cls-2" d="M25,0A24.92,24.92,0,0,1,42.68,7.32" transform="translate(1 2)">
+        <animateTransform 
+             attributeName="transform" 
+             type="rotate"
+             dur="1s" 
+             from="0 26 27"
+             to="360 26 27" 
+             repeatCount="indefinite"/>
+        </path>
+    </svg>
+  </div>
+   
+  <script  src="main.js"></script>
+
+  <script>
+
+    const load = document.getElementById("load");
+
+    function loading() {
+      load.classList.add("carregado");
+    
+      setTimeout( fechar => {
+        load.classList.remove("carregado");
+      },800);
+      
+    }
+
+    closeL();
+  
+
+  </script>
+  
 </body>
 
 </html>

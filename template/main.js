@@ -4,18 +4,34 @@ const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 const language = 'language=pt-BR';
 
 function getMovie() {
-  var movieid = Math.floor(Math.random() * 1000 + 1);
+  var movieid = Math.floor(Math.random() * 500 + 1);
   console.log(movieid);
 
 
   function getfilm() {
-  axios.get(BASE_URL+ movieid + "?api_key=" + API_KEY)
+  axios.get(BASE_URL+ movieid + "?api_key=" + API_KEY + "&" + language)
   .then(response => {
-    img.src = response.data.backdrop_path;
+    console.log(response.data.poster_path);
+    const dImg = response.data.poster_path;
     nome.textContent = response.data.original_title;
     overview.textContent = response.data.overview
+    showMovie(dImg);
   })
-  .catch(error => console.error(error))
+  .catch(error => console.log(error))
 }
 
+getfilm();
+
+}
+
+function procurar() {
+  const btn = document.getElementById("btn");
+  btn.addEventListener("click", getMovie);
+}
+
+procurar();
+
+function showMovie(imagem) {
+  const img = document.getElementById("img");
+  img.src = `${IMG_URL}${imagem}`
 }
